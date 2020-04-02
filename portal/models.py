@@ -3,7 +3,6 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField('nome', max_length=100)
-    color = models.CharField('cor', max_length=100)
 
     class Meta:
         verbose_name = 'Categoria'
