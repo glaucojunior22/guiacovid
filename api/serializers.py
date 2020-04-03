@@ -8,7 +8,9 @@ class SourceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Source
         # fields = '__all__'
-        fields = ['id', 'title', 'description', 'url', 'image', 'category', 'tags']
+        fields = ['id', 'title', 'description', 'url', 'image', 'category',
+                  'tags', 'facebook', 'instagram', 'twitter', 'whatsapp',
+                  'play_store', 'app_store']
 
 
 class CategorySerializer(serializers.ModelSerializer):
