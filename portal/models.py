@@ -16,15 +16,16 @@ class Source(models.Model):
     title = models.CharField('titulo', max_length=100)
     description = models.TextField('descrição', max_length=500)
     category = models.ForeignKey(Category, models.CASCADE, 'sources', 'source')
-    image = models.ImageField('imagem', upload_to='uploads', null=True)
-    url = models.CharField('URL', max_length=255, blank=True, null=True)
+    image = models.ImageField('imagem', upload_to='uploads', blank=True,
+                              null=True)
+    site = models.CharField('Site', max_length=255, blank=True, null=True)
     twitter = models.CharField('Twitter', max_length=255, blank=True,
                                null=True)
     whatsapp = models.CharField('Whatsapp', max_length=255, blank=True,
                                 null=True)
     facebook = models.CharField('Facebook', max_length=255, blank=True, 
                                 null=True)
-    instagram = models.CharField('Instgram', max_length=255, blank=True,
+    instagram = models.CharField('Instagram', max_length=255, blank=True,
                                  null=True)
     play_store = models.CharField('Play Store', max_length=255, blank=True,
                                   null=True)
