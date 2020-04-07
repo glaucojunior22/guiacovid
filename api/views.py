@@ -5,15 +5,20 @@ from .serializers import SourceSerializer, CategorySerializer, TagSerializer
 from portal.models import Category, Source, Tag
 
 
-class SourceViewSet(viewsets.ModelViewSet):
+#Para permitir  (POST, PUT, PATCH e DELETE) use serializers.ModelViewSet
+class SourceViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Source.objects.all()
     serializer_class = SourceSerializer
 
-class CategoryViewSet(viewsets.ModelViewSet):
+
+#Para permitir  (POST, PUT, PATCH e DELETE) use serializers.ModelViewSet
+class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
-class TagViewSet(viewsets.ModelViewSet):
+
+#Para permitir  (POST, PUT, PATCH e DELETE) use serializers.ModelViewSet
+class TagViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Tag.objects.all()
     serializer_class = TagSerializer
 
